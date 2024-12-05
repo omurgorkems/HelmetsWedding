@@ -1,0 +1,239 @@
+/* Genel ayarlar */
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lora', serif;
+}
+
+/* Header ayarları */
+header {
+    position: relative;
+    width: 100%;
+    height: 500px; /* Header yüksekliği */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+}
+
+/* Header içindeki fotoğrafların düzenlenmesi */
+.photo-container {
+    display: flex;
+    justify-content: center; /* Fotoğrafları yatayda ortala */
+    align-items: center; /* Dikeyde hizala */
+    gap: 80px; /* Fotoğraflar arasındaki boşluk */
+    margin-top: 40px; /* Fotoğrafların üst kısmından boşluk */
+}
+
+.header-photo {
+    height: 200px; /* Varsayılan fotoğraf yüksekliği */
+    object-fit: cover; /* Fotoğrafların düzgün kesilmesi */
+}
+
+/* Ortadaki fotoğrafı büyüt */
+.photo-container img:nth-child(2) {
+    height: 500px; /* Ortadaki fotoğraf daha büyük */
+}
+
+/* Soldaki ve sağdaki fotoğrafları küçült */
+.photo-container img:nth-child(1),
+.photo-container img:nth-child(3) {
+    height: 300px; /* Sol ve sağ fotoğraflar daha küçük */
+}
+
+/* Text elementlerinin ortadaki fotoğrafın üzerine konumlandırılması */
+header h1, header p {
+    position: absolute;
+    color: white;
+    text-align: center;
+    z-index: 10;
+}
+
+header h1 {
+    top: 40%; /* H1 başlığını ortala */
+    font-size: 3rem;
+    font-weight: 700;
+    margin-top: 240px;
+}
+
+
+/* Navigation Bar */
+nav {
+    position: absolute;
+    top: 0;
+    width: 100%; /* Tam genişlik */
+    background-color: #fff; /* Beyaz arka plan */
+    padding: 10px 0; /* Dikey padding */
+    box-sizing: border-box; /* Padding'i genişliğe dahil et */
+}
+
+nav ul {
+    list-style: none;
+    margin: 100;
+    padding: 0;
+    display: flex;
+    justify-content: space-around; /* Menü öğeleri arasında eşit boşluk */
+    width: 100%;
+    text-align: center;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 1rem; /* Genel yazı boyutu */
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #6e5b5b; /* Hover rengi */
+}
+
+/* Deren & Berat ifadesi için özel stil */
+nav ul li a#isim {
+    font-size: 1.5rem; /* Daha büyük boyut */
+    font-weight: 800;  /* Daha kalın */
+    
+}
+
+#program {
+    display: flex;
+    justify-content: center; /* Öğeleri yatayda ortalar */
+    flex-wrap: wrap; /* Öğelerin birden fazla satıra geçmesini sağlar */
+    margin-top: 40px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 200px;
+    background-image: url('helmetsimages/tabloince.jpg'); /* Arka plan görseli */
+    background-size: cover; /* Görselin tüm alanı kaplamasını sağlar */
+    background-position: center; /* Görseli ortalar */
+    background-repeat: no-repeat; /* Görselin tekrar etmesini engeller */
+}
+
+#program h2 {
+    width: 100%; /* Başlığı tam genişlikte yapar */
+    text-align: center; /* Başlığı ortalar */
+    margin-bottom: 20px; /* Başlık ile içerik arasına boşluk ekler */
+    color: white; /* Başlık rengini beyaz yapar */
+}
+
+#program p {
+    margin: 10px 20px; /* Her bir p elementi arasında boşluk */
+    text-align: center; /* Yazıyı ortalar */
+    color: white; /* Yazı rengini beyaz yapar */
+    background: rgba(0, 0, 0, 0.5); /* Arka planı yarı şeffaf siyah yapar */
+    padding: 10px; /* İçeriğe boşluk ekler */
+    border-radius: 8px; /* Kenarları yuvarlatır */
+    flex: 1 1 150px; /* Eşit genişlikte yer kaplamalarını sağlar */
+}
+
+#konum {
+    text-align: center;
+    margin: 40px 0;
+}
+
+#konum h2 {
+    font-size: 2.5rem; /* Başlığı büyük yapar */
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 20px; /* Başlık ile içerik arasında boşluk */
+}
+
+.konum-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px; /* Öğeler arasında boşluk */
+    margin: 0 auto;
+}
+
+.konum-container p {
+    font-size: 1.2rem;
+    width: 150px; /* Paragrafların genişliğini ayarlamak için */
+    color: #000;
+}
+
+.konum-container img.konum-img {
+    width: 500px; /* Görselin genişliği */
+    height: auto;
+    object-fit: cover; /* Görselin düzgün görünmesini sağlar */
+    
+}
+
+.konum-container .sol {
+    text-align: right; /* Sol paragrafa sağdan hizalama */
+}
+
+.konum-container .sag {
+    text-align: left; /* Sağ paragrafa soldan hizalama */
+}
+
+/* Buton için stil */
+.konum-button {
+    display: inline-block;
+    margin-top: 30px; /* Görselin altına boşluk ekler */
+    padding: 10px 20px;
+    background-color: #000; /* Siyah buton */
+    color: #fff; /* Beyaz yazı */
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 5px; /* Butona köşelerde yuvarlama */
+    transition: background-color 0.3s ease;
+}
+
+.konum-button:hover {
+    background-color: #976e6e; /* Hover durumunda kırmızı renkte değişir */
+}
+
+#music {
+    text-align: center;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 15px;
+}
+
+.music h2{
+    text-align: center;
+}
+
+#countdown {
+    display: flex;
+    justify-content: center; /* Öğeleri yatayda ortalar */
+    flex-wrap: wrap; /* Öğelerin birden fazla satıra geçmesini sağlar */
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 350px;
+    background-image: url(helmetsimages/pano.jpg);
+    background-size: cover; /* Görselin tüm alanı kaplamasını sağlar */
+    background-position: center; /* Görseli ortalar */
+    background-repeat: no-repeat; /* Görselin tekrar etmesini engeller */
+}
+
+
+
+#countdown p {
+    margin: 10px 20px; /* Her bir p elementi arasında boşluk */
+    text-align: center; /* Yazıyı ortalar */
+    color: white; /* Yazı rengini beyaz yapar */
+    background: rgba(0, 0, 0, 0.5); /* Arka planı yarı şeffaf siyah yapar */
+    margin-top: 110px;
+    padding: 10px; /* İçeriğe boşluk ekler */
+    border-radius: 8px; /* Kenarları yuvarlatır */
+    flex: 1 1 150px; /* Eşit genişlikte yer kaplamalarını sağlar */
+}
+
+
+/* Footer ayarları */
+footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    width: 100vw;
+}
+
